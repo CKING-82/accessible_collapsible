@@ -1,0 +1,186 @@
+/* Makes the hidden attribute work on IE */
+[hidden] { display: none; }
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html { 
+  font-family: 'Lato', sans-serif;
+  font-size: 16px; 
+}
+
+ul { padding-left: 0; }
+
+li { list-style-type: none; }
+
+.main-heading {
+  margin: 5px 0 5px 0;
+  font-family: 'Arvo', serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #FFFFFF
+}
+
+.faq__txt {
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+.faq__filter-heading {
+  margin: 0 0 5px;
+  padding: 10px;
+  border-bottom: 1px solid #1d4289;
+  font-family: 'Arvo', serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #1d4289;
+}
+
+.faq__accordion__section-heading {
+  margin: 0 0 10px;
+}
+
+.wrapper {
+  display: grid;
+  max-width: 1280px;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 50px 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-areas:
+    "header header"
+    "sidebar content";
+}
+
+.heading {
+  grid-area: header;
+  padding-left: 10px;
+  background-color: #1d4289;
+}
+
+.faq__nav {
+  grid-area: sidebar;
+  padding-right: 10px;
+  border-right: 1px solid #1B365C;
+}
+
+.faq__filter-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 11px 5px;
+  border: none;
+  margin-bottom: 5px;
+  background-color: #7EA1C4;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #051122;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  transition: ease 0.3s;
+}
+
+.faq__filter-link__icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 14px;
+}
+
+.faq__filter-link.selected,
+.faq__filter-link:hover, .faq__filter-link:focus {
+  background-color: #051122;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.faq {
+  grid-area: content;
+}
+
+.faq__accordion__expand-button {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px;
+  border: 0;
+  background-color: #dfe6e9;
+  text-align-last: left;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: ease 0.4s;
+}
+
+.faq__accordion__expand-button--sub {
+  padding: 10px;
+  font-size: 1.15rem;
+}
+
+.faq__accordion__expand-button[aria-expanded="true"],
+.faq__accordion__expand-button:hover {
+  background-color: #051122;
+  color: #fefefe;
+}
+
+.faq__accordion__expand-button:hover  
+
+.faq__accordion__expand-button--sub[aria-expanded="true"],
+.faq__accordion__expand-button--sub:hover {
+  background-color: #051122;
+}
+
+.faq__accordion__expand-button__icon {
+  position: absolute;
+  background-image: url(./images/plus.png);
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.faq__accordion__expand-button:hover .faq__accordion__expand-button__icon {
+  background-image: url(./images/plus-white.png);
+}
+
+.faq__accordion__expand-button[aria-expanded="true"]:hover .faq__accordion__expand-button__icon, 
+[aria-expanded="true"] .faq__accordion__expand-button__icon {
+  background-image: url(./images/minus.png);
+}
+
+.faq__accordion__expand-button--sub .faq__accordion__expand-button__icon {
+  width: 20px;
+}
+
+.faq__second-level {
+  padding-left: 10px;
+}
+
+.faq__second-level:last-child {
+  margin-bottom: 20px;
+}
+
+.faq__second-level h4 {
+  margin: 5px 0 0;
+  border-bottom: 2px solid #000;
+}
+
+.faq__accordion__panel {
+  padding: 10px;
+  background-color: #E6E6E6;
+}
+
+.faq__accordion__panel .faq__txt {
+  max-width: 600px;
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>PPPO | FAQ Section</title>
+  </head>
+  <body>
+    
+    <div class="wrapper">
+      <div class="heading">
+        <h1 class="main-heading">Accessible FAQ Section Example</h1>
+      </div>
+      
+      <!--  Ensure aria-labelledby matches the h2 heading id. When using a screen reader this will announce the heading when the nav first receives focus from tabbing.  -->
+      <nav class="faq__nav" role="navigation" aria-labelledby="faq__filter-heading">
+
+        <h2 class="faq__filter-heading" id="faq__filter-heading">FAQ Sections Filters</h2>
+        <ul>
+          <li>
+            <a data-filter-type="Display All" class="faq__filter-link selected" href="#faq__accordion__section-a">
+              All Sections 
+              <img aria-hidden="true" src="images/right-chevron.png" alt="" class="faq__filter-link__icon">
+            </a>
+          </li>
+          <li>
+            <a data-filter-type="Documentation" class="faq__filter-link" href="#faq__accordion__section-a">
+              Documentation 
+              <img aria-hidden="true" src="images/right-chevron.png" alt="" class="faq__filter-link__icon">
+            </a>
+          </li>
+          <li>
+            <a data-filter-type="Training" class="faq__filter-link" href="#faq_b">Training 
+              <img aria-hidden="true" src="images/right-chevron.png" alt="" class="faq__filter-link__icon">
+            </a>
+          </li>
+          <li>
+            <a data-filter-type="General-Info" class="faq__filter-link" href="#faq_c">General Info 
+              <img aria-hidden="true" src="images/right-chevron.png" alt="" class="faq__filter-link__icon">
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="faq">
+        <!-- Some browsers are poor at actually sending focus to linked page fragments. Placing tabindex="-1" on the target fragment fixes this. -->
+        <!-- Documentation Start -->
+        <div class="faq__section" id="faq__accordion__section-a" tabindex="-1" aria-label="Documentation FAQs" data-section-title="Documentation">
+          <h3 class="faq__accordion__section-heading" >
+            <button 
+              id="faq_accordion__section_button-a"
+              aria-expanded="false"
+              aria-controls="faq_accordion-panel-a1"
+              class="faq__accordion__expand-button"
+              data-next-sibling="faq_accordion__section_button-b"
+              data-previous-sibling="faq_accordion__section_button-c"
+              >
+              Documentation
+              <span class="faq__accordion__expand-button__icon" aria-hidden="true">
+              </span>
+            </button>
+          </h3>
+          <div id="faq_accordion-panel-a1" class="faq__first-level" hidden>
+            <div class="faq__second-level">
+              <h4>
+                <button
+                  id="faq__accordion__section-a2"
+                  aria-expanded="false"
+                  aria-controls="faq__sub-accordion-sub-panel-a2"
+                  class="faq__accordion__expand-button faq__accordion__expand-button--sub"
+                  data-next-sibling="faq__accordion__section-a3"
+                  data-previous-sibling="faq__accordion__section-a3">
+                  How do I upload documentation?
+                  <span class="faq__accordion__expand-button__icon" aria-hidden="true">
+                  </span>
+                </button>
+              </h4>
+              <div id="faq__sub-accordion-sub-panel-a2" class="faq__accordion__panel" aria-labelledby="faq__accordion__section-a2" tabindex="0" hidden>
+                <p class="faq__txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum quis quam in tristique. Phasellus nec lectus laoreet, dapibus nunc vitae, ultricies odio. 
+                </p>
+                <p class="faq__txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum quis quam in tristique. Phasellus nec lectus laoreet, dapibus nunc vitae, ultricies odio. 
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__second-level">
+              <h4>
+                <button
+                  id="faq__accordion__section-a3"
+                  aria-expanded="false"
+                  aria-controls="faq__sub-accordion-sub-panel-a3"
+                  class="faq__accordion__expand-button faq__accordion__expand-button--sub"
+                  data-next-sibling="faq__accordion__section-a2"
+                  data-previous-sibling="faq__accordion__section-a2"
+                  >
+                  Where can I find my previous uploads?
+                  <span class="faq__accordion__expand-button__icon" aria-hidden="true">
+                  </span>
+                </button>
+              </h4>
+              <div id="faq__sub-accordion-sub-panel-a3" class="faq__accordion__panel" aria-labelledby="faq__accordion__section-a3" tabindex="0" hidden>
+                <p class="faq__txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum quis quam in tristique. Phasellus nec lectus laoreet, dapibus nunc vitae, ultricies odio. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Documentation End -->
+
+        <!-- Training Start -->
+        <div class="faq__section" id="faq_b" tabindex="-1" aria-label="Training FAQs" data-section-title="Training">
+          <h3 class="faq__accordion__section-heading" >
+            <button
+              id="faq_accordion__section_button-b"
+              aria-expanded="false"
+              aria-controls="faq_accordion-panel-b1"
+              class="faq__accordion__expand-button"
+              data-next-sibling="faq_accordion__section_button-c"
+              data-previous-sibling="faq_accordion__section_button-a">
+              Training
+              <span class="faq__accordion__expand-button__icon" aria-hidden="true">
+              </span>
+            </button>
+          </h3>
+          <div id="faq_accordion-panel-b1" class="faq__first-level" hidden>
+            <div class="faq__second-level">
+              <h4>
+                <button
+                  id="faq__accordion__section-b2"
+                  aria-expanded="false"
+                  aria-controls="faq__sub-accordion-sub-panel-b2"
+                  class="faq__accordion__expand-button faq__accordion__expand-button--sub"
+                  data-next-sibling="faq__accordion__section-b3"
+                  data-previous-sibling="faq__accordion__section-b4">
+                  How much is training?
+                  <span class="faq__accordion__expand-button__icon" aria-hidden="true">
+                  </span>
+                </button>
+              </h4>
+              <div id="faq__sub-accordion-sub-panel-b2" class="faq__accordion__panel" aria-labelledby="faq__accordion__section-b2" tabindex="0" hidden>
+                <p class="faq__txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum quis quam in tristique. Phasellus nec lectus laoreet, dapibus nunc vitae, ultricies odio. 
+                </p>
+                <p class="faq__txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum quis quam in tristique. Phasellus nec lectus laoreet, dapibus nunc vitae, ultricies odio. 
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__second-level">
+              <h4>
+                <button
+                  id="faq__accordion__section-b3"
+                  aria-expanded="false"
+                  aria-controls="faq__sub-accordion-sub-panel-b3"
+                  class="faq__accordion__expand-button faq__accordion__expand-button--sub"
+                  data-next-sibling="faq__accordion__section-b4"
+                  data-previous-sibling="faq__accordion__section-b2">
+                  Where is the training center?
+                  <span class="faq__accordion__expand-button__icon" aria-hidden="true">
+                  </span>
+                </button>
+              </h4>
+              <div id="faq__sub-accordion-sub-panel-b3" class="faq__accordion__panel" aria-labelledby="faq__accordion__section-b3" tabindex="0" hidden>
+                <p class="faq__txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum quis quam in tristique. Phasellus nec lectus laoreet, dapibus nunc vitae, ultricies odio. Phasellus nec lectus laoreet, dapibus nunc vitae, ultricies odio. 
+                </p>
+                <p class="faq__txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum quis quam in tristique. 
+                </p>
+                <p class="faq__txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum quis quam in tristique. Phasellus nec lectus laoreet, dapibus nunc vitae, ultricies odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum quis quam in tristique. Phasellus nec lectus laoreet, dapibus nunc vitae, ultricies odio.
+                </p>
+                <p class="faq__txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum quis quam in tristique. Phasellus nec lectus laoreet, dapibus nunc vitae, ultricies odio. 
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__second-level">
+              <h4>
+                <button
+                  id="faq__accordion__section-b4"
+                  aria-expanded="false"
+                  aria-controls="faq__sub-accordion-sub-panel-b4"
+                  class="faq__accordion__expand-button faq__accordion__expand-button--sub"
+                  data-next-sibling="faq__accordion__section-b2"
+                  data-previous-sibling="faq__accordion__section-b3">
+                  Do you offer weekend training?
+                  <span class="faq__accordion__expand-button__icon" aria-hidden="true">
+                  </span>
+                </button>
+              </h4>
+              <div id="faq__sub-accordion-sub-panel-b4" class="faq__accordion__panel" aria-labelledby="faq__sub-accordion-sub-panel-b4" tabindex="0" tabindex="0" hidden>
+                <p class="faq__txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum quis quam in tristique. Phasellus nec lectus laoreet, dapibus nunc vitae, ultricies odio. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Training End -->
+
+        <!-- General Info Start -->
+        <div class="faq__section" id="faq_c" tabindex="-1" aria-label="General Info FAQs" data-section-title="General-Info">
+          <h3 class="faq__accordion__section-heading" >
+            <button
+              id="faq_accordion__section_button-c"
+              aria-expanded="false"
+              aria-controls="faq_accordion-panel-c1"
+              class="faq__accordion__expand-button"
+              data-next-sibling="faq_accordion__section_button-a"
+              data-previous-sibling="faq_accordion__section_button-b"
+              >
+              General Info
+              <span class="faq__accordion__expand-button__icon" aria-hidden="true">
+              </span>
+            </button>
+          </h3>
+          <div id="faq_accordion-panel-c1" class="faq__first-level" hidden>
+            <div class="faq__second-level">
+              <h4>
+                <button
+                  id="faq__accordion__section-c2"
+                  aria-expanded="false"
+                  aria-controls="faq__sub-accordion-sub-panel-c2"
+                  class="faq__accordion__expand-button faq__accordion__expand-button--sub"
+                  data-next-sibling="faq__accordion__section-c3"
+                  data-previous-sibling="faq__accordion__section-c3">
+                  How long have you been in business?
+                  <span class="faq__accordion__expand-button__icon" aria-hidden="true">
+                  </span>
+                </button>
+              </h4>
+              <div id="faq__sub-accordion-sub-panel-c2" class="faq__accordion__panel" aria-labelledby="faq__accordion__section-c2" tabindex="0" hidden>
+                <p class="faq__txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum quis quam in tristique. Phasellus nec lectus laoreet, dapibus nunc vitae, ultricies odio. 
+                </p>
+                <p class="faq__txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum quis quam in tristique. Phasellus nec lectus laoreet, dapibus nunc vitae, ultricies odio. 
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__second-level">
+              <h4>
+                <button
+                  id="faq__accordion__section-c3"
+                  aria-expanded="false"
+                  aria-controls="faq__sub-accordion-sub-panel-c3"
+                  class="faq__accordion__expand-button faq__accordion__expand-button--sub"
+                  data-next-sibling="faq__accordion__section-c2"
+                  data-previous-sibling="faq__accordion__section-c2">
+                  Do you have an app?
+                  <span class="faq__accordion__expand-button__icon" aria-hidden="true">
+                  </span>
+                </button>
+              </h4>
+              <div id="faq__sub-accordion-sub-panel-c3" class="faq__accordion__panel" aria-labelledby="faq__sub-accordion-sub-panel-c3" tabindex="0" hidden>
+                <p class="faq__txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum quis quam in tristique. Phasellus nec lectus laoreet, dapibus nunc vitae, ultricies odio. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- General Info End -->
+        
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
